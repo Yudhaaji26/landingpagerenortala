@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Datang di Portal Aplikasi</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /*
+           * Styling untuk background gambar
+           * Ganti 'url("path/to/your/image.jpg")' dengan path ke gambar Anda.
+           * Pastikan path-nya benar (misalnya, 'images/background.jpg' jika ada folder images).
+           */
+        .bg-custom-image {
+            background-image: url("background-44.png"); /* Ganti dengan URL/path gambar Anda */
+            background-size: cover; /* Memastikan gambar menutupi seluruh area */
+            background-position: center; /* Memposisikan gambar di tengah */
+            background-repeat: no-repeat; /* Mencegah gambar berulang */
+            background-attachment: fixed; /* Membuat gambar tetap saat discroll (opsional) */
+        }
+        /* Opsi tambahan: overlay untuk membuat teks lebih mudah dibaca */
+        .bg-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.3); /* Warna overlay hitam dengan transparansi 30% */
+            z-index: 1;
+        }
+        .content-z-index {
+            z-index: 2; /* Pastikan konten utama berada di atas overlay */
+            position: relative;
+        }
+
+    </style>
+</head>
+<body class="bg-custom-image bg-overlay min-h-screen flex items-center justify-center relative">
+    <div class="container mx-auto px-4 py-12 content-z-index">
+        <header class="text-center mb-12">
+            <h1 class="text-5xl font-extrabold text-white leading-tight">
+                Selamat Datang di <span class="text-indigo-700">Portal Aplikasi Kami</span>
+            </h1>
+            <p class="mt-3 text-xl text-black-500">Pilih aplikasi yang ingin Anda akses:</p>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <a href="javascript:void(0);" class="card bg-white rounded-xl shadow-lg p-8 flex flex-col items-center text-center transform hover:shadow-xl">
+                <div class="bg-blue-100 rounded-full p-4 mb-6">
+                    <svg class="w-16 h-16 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9.25 21M14.25 17L14.75 21M6.75 12V3.75a2.25 2.25 0 012.25-2.25h4.5a2.25 2.25 0 012.25 2.25V12M18 10h1.5a2.25 2.25 0 012.25 2.25v.75m-4.5 9h-1.5M21.75 12.75V15M3 12h1.5a2.25 2.25 0 002.25 2.25v.75m-4.5 9H3.75M12 21.75V15"></path>
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800 mb-3">Sistem Informasi SiRENA</h2>
+                <p class="text-gray-600 mb-6">Bagian Program dan Anggaran</p>
+                <span class="mt-auto bg-blue-500 text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-600 transition duration-300">
+                    Akses SiRENA
+                </span>
+            </a>
+
+            <a href="javascript:void(0);" class="card bg-white rounded-xl shadow-lg p-8 flex flex-col items-center text-center transform hover:shadow-xl">
+                <div class="bg-green-100 rounded-full p-4 mb-6">
+                    <svg class="w-16 h-16 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3-.895-3-2 1.343-2 3-2zM9 12c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3zM15 12c0 1.657 1.343 3 3 3s3-1.343 3-3-1.343-3-3-3-3 1.343-3 3z"></path>
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800 mb-3">Sistem Informasi E-Performance</h2>
+                <p class="text-gray-600 mb-6">Bagian Monitoring dan Evaluasi</p>
+                <span class="mt-auto bg-green-500 text-white font-semibold py-3 px-8 rounded-full hover:bg-green-600 transition duration-300">
+                    Akses E-Performance
+                </span>
+            </a>
+
+            <a href="javascript:void(0);" class="card bg-white rounded-xl shadow-lg p-8 flex flex-col items-center text-center transform hover:shadow-xl">
+                <div class="bg-purple-100 rounded-full p-4 mb-6">
+                    <svg class="w-16 h-16 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V8M5 5l2.5 2.5M10 6l4-4 6 6-4 4"></path>
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800 mb-3">Sistem Informasi Sakti</h2>
+                <p class="text-gray-600 mb-6">Sistem Informasi Kementerian Keuangan</p>
+                <span class="mt-auto bg-purple-500 text-white font-semibold py-3 px-8 rounded-full hover:bg-purple-600 transition duration-300">
+                    Akses Sakti
+                </span>
+            </a>
+
+        </main>
+
+        <footer class="text-center mt-12 text-gray-200 text-sm">
+            &copy; 2025 Portal Aplikasi Biro Perencanaan, Organisasi dan Tata Laksana. Semua Hak Dilindungi.
+        </footer>
+    </div>
+
+</body>
+</html>
